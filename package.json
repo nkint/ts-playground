@@ -1,0 +1,23 @@
+{
+  "name": "ts-import-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/index.js",
+  "scripts": {
+    "build": "browserify ./src/index.ts -p [ tsify ] | uglifyjs -cm > public/index.js",
+    "start": "budo src/index.ts:index.js --dir public --live --watch --open -- -p [ tsify ]",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "nkint",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^16.2.2",
+    "budo": "^11.3.2",
+    "tsify": "^4.0.0",
+    "typescript": "^3.0.1",
+    "uglify-js": "^3.4.7"
+  },
+  "dependencies": {
+    "element-size": "^1.1.1"
+  }
+}
